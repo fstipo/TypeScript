@@ -1,14 +1,18 @@
-function add(n1:number,n2:number,showResult:boolean,showText){
-   const sum = n1 + n2;
+function add(n1:number,n2:number,showResult:boolean,showText:string){
+   const result = n1 + n2;
    if(showResult){
-      console.log(showText+ sum);
+      console.log(showText + result);
    }else{
-      return n1 + n2;
+      return result;
    }
 }
 
-const number1 = 11;
+let number1:number = 11; // don't do this
+// only if
+let number3:number;
+number3 = 18;
 const number2 = 118;
 const printResult = true;
-const printText = "Sum of numbers is: ";
-const result = add(number1,number2,printResult, printText);
+let printText = "Result is: ";
+printText = "0";
+ add(number1,number2,printResult, printText);
