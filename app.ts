@@ -1,14 +1,17 @@
 
-const person ={
+const person:{
+   name:string;
+   age:number;
+   hobbies:string[];
+   role:[number,string];
+} ={
    name:"Franko",
    age:44,
-   hobbies:["music","basketball"]
+   hobbies:["music","basketball"],
+   role:[2,"author"]
 }
 
-// let favoriteActivities:string[];
-let favoriteActivities:any[];
-favoriteActivities=["dance",true]
-
-for(const hobby of person.hobbies){
-   console.log(hobby.length);
-}
+// Warning for tuple -> push is working
+person.role.push("name");
+// person.role[1]=100;
+// person.role=[2,"string",2]
