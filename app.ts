@@ -1,17 +1,19 @@
+// const ADMIN = 0;
+// const READ_ONLY = 1;
+// const AUTHOR= 2;
 
-const person:{
-   name:string;
-   age:number;
-   hobbies:string[];
-   role:[number,string];
-} ={
+
+enum Role {"ADMIN" ="ADMIN" ,"READ_ONLY"=200,"AUTHOR"="AUTHOR"}
+
+const person ={
    name:"Franko",
    age:44,
    hobbies:["music","basketball"],
-   role:[2,"author"]
+   role:Role.ADMIN
 }
 
-// Warning for tuple -> push is working
-person.role.push("name");
-// person.role[1]=100;
-// person.role=[2,"string",2]
+if(person.role === Role.ADMIN){
+   console.log("You are ADMIN");
+}else{
+   console.log("You are not ADMIN");
+}
